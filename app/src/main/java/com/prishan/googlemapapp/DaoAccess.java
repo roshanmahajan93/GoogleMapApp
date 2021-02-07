@@ -13,20 +13,20 @@ import java.util.List;
 public interface DaoAccess {
 
     @Insert
-    long insertTodo(LocationModel todo);
+    long insertLocation(LocationModel locationModel);
 
     @Insert
-    void insertTodoList(List<LocationModel> todoList);
+    void insertLocationList(List<LocationModel> locationModelList);
 
-    @Query("SELECT * FROM " + MyDatabase.TABLE_NAME_TODO)
-    List<LocationModel> fetchAllTodos();
+    @Query("SELECT * FROM " + MyDatabase.TABLE_NAME_LOCATION)
+    List<LocationModel> fetchAllLocationModel();
 
-    @Query("SELECT * FROM " + MyDatabase.TABLE_NAME_TODO + " WHERE location_id = :locationId")
+    @Query("SELECT * FROM " + MyDatabase.TABLE_NAME_LOCATION + " WHERE location_id = :locationId")
     LocationModel fetchLocationModelListById(int locationId);
 
     @Update
-    int updateTodo(LocationModel todo);
+    int updateLocationModel(LocationModel locationModel);
 
     @Delete
-    int deleteTodo(LocationModel todo);
+    int deleteLocationModel(LocationModel locationModel);
 }

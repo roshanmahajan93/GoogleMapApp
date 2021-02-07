@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
 
-@Entity(tableName = MyDatabase.TABLE_NAME_TODO)
+@Entity(tableName = MyDatabase.TABLE_NAME_LOCATION)
 public class LocationModel implements Serializable {
 
     @PrimaryKey(autoGenerate = true)
@@ -15,6 +15,7 @@ public class LocationModel implements Serializable {
     public String address;
     public String image_url;
     public String description;
-
+    public double latitude;
+    public double longitude;
 
 }
